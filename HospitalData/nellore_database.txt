@@ -1,0 +1,35 @@
+*************** Nellore ****************************
+
+import pymongo 
+from pymongo import MongoClient
+from mongoengine import *
+#from model import Post
+
+#using pymongo
+client = MongoClient()
+db = client['hospitaldb'] 
+hosp_details = db.hospital_data
+hosp_data = {
+    'hosp_id':'RK006',
+    'hosp_name':'Appolo Speciality Hospital',
+    'hosp_email':'appolospecialityhospital@gmail.com',
+    'hosp_address':'16/111/1133, Muttukur Road, Pinakini Nagar, Pinakini Avenue, Ramji Nagar, Landmark: Near Childrens Park,Nellore',
+    'hosp_website':'https://www.practo.com/Nellore/doctor/dr-bindu-menon-neurologist?specialization=neurologist',
+    'hosp_specs':['Neurologist','Dermatologist','Obstetrician', 'Gynecologist','Pathologist','Radiologist'],
+    'hosp_mobile':['040 3817 2145'],
+    'hosp_facility':['Clinical Services','Laboratory Services','ENMG','Stroke Care ICU',
+                        '24 Hour Pharmacy','Ultra Sound Scanning','In-House Spiral CT Scan',
+                        'In-House Digital X-ray','Pharmacy','Mode of Payment','hygenic'],
+    'hosp_timings':'24 Hours',
+    'doc_list':[{'doc_id':'Doc_0030','doc_name':'Dr. Bindu Menon','doc_qualification':'MBBS, MD - Medicine, DM - Neurology, DNB - Neurology ','doc_specialization': 'Neurologist','doc_experience':'23 years','doc_fee':'750 /-'},
+                {'doc_id':'Doc_0031','doc_name':'Dr. Surya. K','doc_qualification':' MBBS, MD - Dermatology , Venereology & Leprosy','doc_specialization': 'Dermatologist ','doc_experience':'7 years','doc_fee':'3000 /-'},
+                {'doc_id':'Doc_0032','doc_name':'Dr. Rohini. U V','doc_qualification':' MBBS, MS - Obstetrics & Gynaecology ','doc_specialization': 'Obstetrician , Gynecologist','doc_experience':'10 years','doc_fee':'650 /-'},
+                {'doc_id':'Doc_0033','doc_name':' Dr. Vivekananda Reddy. C ','doc_qualification':' MBBS, MS - Orthopaedics','doc_specialization': 'Orthopedist','doc_experience':'10 years','doc_fee':'599 /-'},
+                {'doc_id':'Doc_0034','doc_name':'Dr. Swetha Reddy. V','doc_qualification':' MBBS, MD - Pathology ', 'doc_specialization':'Pathologist ','doc_experience':' 6 years','doc_fee':'320 /-'},
+                {'doc_id':'Doc_0035','doc_name':'Dr. Gayatri. M','doc_qualification':'MBBS, MD - Radio Diagnosis/Radiology ', 'doc_specialization':'  Radiologist','doc_experience':' 12 years','doc_fee':'440 /-'}
+                ]
+}
+hosp_details.insert_one(hosp_data)
+print("inserted")
+client.close()
+------------------------------------------------------------------------------

@@ -1,0 +1,401 @@
+1)city===VIZAG===========
+
+import pymongo 
+from pymongo import MongoClient
+from mongoengine import *
+#from model import Post
+
+#using pymongo
+client = MongoClient()
+db = client['hospitals'] 
+hosp_details = db.hospital_details
+
+hosp_data = {
+    'hosp_id':'V01',
+    'hosp_name':'Padmasri Hospitals',
+    'hosp_email':'padmasrihospitals@gmail.com',
+    'hosp_address':'49-48-16/5.NGGG’s Colony,Akkayyapalem, NH-5,Visakhapatnam,',
+    'hosp_website':'www.padmasrihospitals.com',
+    'hosp_specs':['Gastroenterology', 'Cardiology' ,'Chest Speciality','Anaesthesiology','Dermatology','ENT'],
+    'hosp_mobile':['0891-2734747','9246614747'],
+    'hosp_facility':['Cash Less Facilities','CT Scan','Color 3d Doppler Ultrasound Scan','24 Hrs Emergency Casualty'],
+    'hosp_timings':'24 Hours',
+    'doc_list':[{'hosp_id':'V01','doc_id':'VD01','doc_name':'Dr.IVS Prasad MD','doc_qualification':'M.D','doc_specialization':'Anaesthesiology','doc_experience':'15 years','doc_fee':'300 /-'},
+                {'hosp_id':'V01','doc_id':'VD02','doc_name':'Dr. D. Srinivasa Rao','doc_qualification':'M.D', 'doc_specialization':'Cardiology','doc_experience':'20 years','doc_fee':'400 /-'},
+                {'hosp_id':'V01','doc_id':'VD03','doc_name':'Dr. Gopichand','doc_qualification':' M.D', 'doc_specialization': 'Dermatology','doc_experience':'12 years','doc_fee':'200 /-'},
+                {'hosp_id':'V01','doc_id':'VD04','doc_name':'Dr.K.Phanindhra','doc_qualification':'M.D','doc_specialization': 'Chest Speciality','doc_experience':'18 years','doc_fee':'500 /-'},
+                {'hosp_id':'V01','doc_id':'VD05','doc_name':'Dr. K.V.R. Srihar','doc_qualification':'M.S', 'doc_specialization':'ENT','doc_experience':'10 years','doc_fee':'100 /-'},
+                {'hosp_id':'V01','doc_id':'VD06','doc_name':'Dr. L.R.S. Girinath','doc_qualification':'M.s', 'doc_specialization':'Gastroenterology','doc_experience':'8 years','doc_fee':'250 /-'}
+                ]
+}
+hosp_details.insert_one(hosp_data)
+print("inserted")
+client.close()
+
+============================================================================================================================================================================================================================================================
+import pymongo 
+from pymongo import MongoClient
+from mongoengine import *
+#from model import Post
+
+#using pymongo
+client = MongoClient()
+db = client['hospitals'] 
+hosp_details = db.hospital_details
+
+hosp_data = {
+    'hosp_id':'V02',
+    'hosp_name':'Apollo Hospitals',
+    'hosp_email':'apollo_vizag@apollohospitals.com',
+    'hosp_address':'Door No 10, Executive Court, 50-80, Waltair Main Rd, opp. Daspalla, Ram Nagar, Visakhapatnam,Andhra Pradesh 530002',
+    'hosp_website':'https://vizag.apollohospitals.com/',
+    'hosp_specs':['Cardiology','Orthopaedics','Dermatology','Pulmonology','Urology' ,'Gynecology', 'Endovascular Surgery','Neurology'],
+    'hosp_mobile':['+91 891 2727272','+91 891 2560858'],
+    'hosp_facility':['Electrophysiology','Private Rooms','Hi Tech Laboratory - 24 Hrs','Hygienic Ward Rooms'],
+    'hosp_timings':'24 Hours',
+    'doc_list':[{'hosp_id':'V02','doc_id':'VD07','doc_name':'Dr A Suresh','doc_qualification':'MBBS, MD (General Medicine)','doc_specialization':'Cardiology','doc_experience':'11 years','doc_fee':'400 /-'},
+                {'hosp_id':'V02','doc_id':'VD08','doc_name':'Dr Abdul D Khan','doc_qualification':'MBBS(AMC, Vizag), MRCS(Edin UK)', 'doc_specialization':'Orthopaedic Surgeon','doc_experience':'20 years','doc_fee':'500 /-'},
+                {'hosp_id':'V02','doc_id':'VD09','doc_name':'Dr Aishwarya Malladi','doc_qualification':'MBBS', 'doc_specialization': 'Dermatology','doc_experience':'8 years','doc_fee':'200 /-'},
+                {'hosp_id':'V02','doc_id':'VD10','doc_name':'Dr Avala Ravi Charan','doc_qualification':'MBBS; DTCD','doc_specialization': 'Pulmonology','doc_experience':'5 years','doc_fee':'300 /-'},
+                {'hosp_id':'V02','doc_id':'VD11','doc_name':'Dr Chodisetti Subba Rao','doc_qualification':'MS', 'doc_specialization':'Urology','doc_experience':'29 years','doc_fee':'250 /-'},
+                {'hosp_id':'V02','doc_id':'VD12','doc_name':'Dr KIRANMAI GOTTAPU','doc_qualification':'MBBS, MS(OBGY)', 'doc_specialization':'Gynecology Surgeon','doc_experience':'11 years','doc_fee':'300 /-'}
+                ]
+}
+hosp_details.insert_one(hosp_data)
+print("inserted")
+client.close()
+===========================================================================================================================================================================================================================================
+import pymongo 
+from pymongo import MongoClient
+from mongoengine import *
+#from model import Post
+
+#using pymongo
+client = MongoClient()
+db = client['hospitals'] 
+hosp_details = db.hospital_details
+
+hosp_data = {
+    'hosp_id':'V03',
+    'hosp_name':'Kala Hospitals',
+    'hosp_email':'info@kalahospitals.com',
+    'hosp_address':'Door No 47-1-104, 6th Lane,Dwaraka Nagar, VisakhapatnamAndhrapradesh - 500 016',
+    'hosp_website':'www.kalahospitals.com',
+    'hosp_specs':['General Surgery','General Medicine','Neurology','Gynecology'],
+    'hosp_mobile':['040 6782 2305','891-2764748', '98491 23546'],
+    'hosp_facility':['Diet Services','Diagnostic Service','Spiritual Services','Nursing Services'],
+    'hosp_timings':'22 Hours',
+    'doc_list':[{'hosp_id':'V03','doc_id':'VD13','doc_name':'Dr. P.P. Srinivasa Murthy','doc_qualification':'MBBS','doc_specialization':'General Medicine','doc_experience':'39 years','doc_fee':'200 /-'},
+                {'hosp_id':'V03','doc_id':'VD14','doc_name':'Dr. M.V. Vijaya Sekhar','doc_qualification':'MBBS', 'doc_specialization':'General Surgery','doc_experience':'21 years','doc_fee':'500 /-'},
+                {'hosp_id':'V03','doc_id':'VD15','doc_name':'Dr. D. Ravi','doc_qualification':'MS', 'doc_specialization': 'Neuro Surgeon','doc_experience':'29 years','doc_fee':'300 /-'},
+                {'hosp_id':'V03','doc_id':'VD16','doc_name':'Dr. P.A. Ramani','doc_qualification':'MBBS; DTCD','doc_specialization': 'General Surgeon , Gynecologist','doc_experience':'29 years','doc_fee':'400 /-'}
+                ]
+}
+hosp_details.insert_one(hosp_data)
+print("inserted")
+client.close()
+============================================================================================================================================================================================================================================
+import pymongo 
+from pymongo import MongoClient
+from mongoengine import *
+#from model import Post
+
+#using pymongo
+client = MongoClient()
+db = client['hospitals'] 
+hosp_details = db.hospital_details
+
+hosp_data = {
+    'hosp_id':'V04',
+    'hosp_name':'Usha Prime Multispeciality Hospital',
+    'hosp_email':'info@ushaprimehospitals.in',
+    'hosp_address':'RTC Complex Rd, Sarada Colony, Anakapalle, Andhra Pradesh 531001',
+    'hosp_website':'www.kalahospitals.com',
+    'hosp_specs':['Gynecology','Urology','ENT','Cardiology','Neurology','Orthopedics','Hematology','Joint Replacement','Neurosurgery','Nephrology'],
+    'hosp_mobile':['08924-224848', '+91 7093334456'],
+    'hosp_facility':['Vaccines Given On All Days','24 Hrs Emergency Casualty','Painless Normal Delivery','All Kinds Of Laprascopic Surgery'],
+    'hosp_timings':'24 Hours',
+    'doc_list':[{ 'hosp_id':'V04','doc_id':'VD17','doc_name':'Dr.C.Avinash','doc_qualification':'MBBS,FAGE, MRCGP (London)','doc_specialization':'General Medicine','doc_experience':'19 years','doc_fee':'200 /-'},
+                { 'hosp_id':'V04','doc_id':'VD18','doc_name':'Dr.M.Suri Appa Rao','doc_qualification':'MS (GEN.SURG, Osmania)', 'doc_specialization':'General & laproscopic Surgeon','doc_experience':'29 years','doc_fee':'400 /-'},
+                { 'hosp_id':'V04','doc_id':'VD19','doc_name':'Dr. G.S.K Sharma','doc_qualification':'DNB (ORTHO) ; FAS', 'doc_specialization': 'orthopedics and joint replacement Surgeon','doc_experience':'20 years','doc_fee':'350 /-'},
+                { 'hosp_id':'V04','doc_id':'VD20','doc_name':'Dr. Anil Kumar Maha Pathro','doc_qualification':'DM (Cardiology), FSCAI,FESC','doc_specialization': 'Cardiology','doc_experience':'12 years','doc_fee':'100 /-'},
+                { 'hosp_id':'V04','doc_id':'VD21','doc_name':'Dr. K. Siva Rama Krishna','doc_qualification':'MBBS, D.O.R.L', 'doc_specialization':'ENT','doc_experience':'20 years','doc_fee':'250 /-'},
+                { 'hosp_id':'V04','doc_id':'VD22','doc_name':'Dr. Rathanaprabha','doc_qualification':'MD, DM(Nephrology)', 'doc_specialization':'nephrologist','doc_experience':'10 years','doc_fee':'200 /-'}
+                ]
+}
+hosp_details.insert_one(hosp_data)
+print("inserted")
+client.close()
+=========================================================================================================================================================================================================================================================================
+import pymongo 
+from pymongo import MongoClient
+from mongoengine import *
+#from model import Post
+
+#using pymongo
+client = MongoClient()
+db = client['hospitals'] 
+hosp_details = db.hospital_details
+
+hosp_data = {
+    'hosp_id':'V05',
+    'hosp_name':'RK Hospital',
+    'hosp_email':'rkhospital.gajuwaka@gmail.com',
+    'hosp_address':'26-16-7,Chaitanya nagar,Gajuwaka,Visakhaptanam-530 026.',
+    'hosp_website':'http://rkhospital.co.in/',
+    'hosp_specs':['Gynecology','ENT','Neurology','Orthopedics','Gastroentrology','Neurosurgery','Nephrology','pulmonology','paediatrics'],
+    'hosp_mobile':['0891-2764411','+91 9348423777','0891-2517699'],
+    'hosp_facility':['50 beds for in-patients','6 Beds Dialysis unit','Labour room (A/C)','Inhouse PHYSIOTHERAPIST'],
+    'hosp_timings':'Monday to Saturday: 9:00 AM To 12.00 PM',
+    'doc_list':[{'hosp_id':'V05','doc_id':'VD23','doc_name':'Dr. V. Chaitanya','doc_qualification':'MBBS','doc_specialization':'Nephrologist','doc_experience':'16 years','doc_fee':'250 /-'},
+                {'hosp_id':'V05','doc_id':'VD24','doc_name':'DR.ADITYA VEMURI','doc_qualification':'MD', 'doc_specialization':'Paediatrician','doc_experience':'26 years','doc_fee':'450 /-'},
+                {'hosp_id':'V05','doc_id':'VD25','doc_name':'Dr. M. Raghubabu','doc_qualification':'MBBS, DNB (Ortho), FISS', 'doc_specialization': 'orthopedician','doc_experience':'22 years','doc_fee':'300 /-'},
+                {'hosp_id':'V05','doc_id':'VD26','doc_name':'Dr. M. K. S. Manju','doc_qualification':'DGO','doc_specialization': 'Gynecologist','doc_experience':'10 years','doc_fee':'200 /-'},
+                {'hosp_id':'V05','doc_id':'VD27','doc_name':'Dr. Lalitha Rajanala','doc_qualification':'DNB, DM (Neurology)', 'doc_specialization':'Neurologist','doc_experience':'29 years','doc_fee':'200 /-'},
+                {'hosp_id':'V05','doc_id':'VD28','doc_name':'Dr. R. L. Praveen','doc_qualification':'MD, DM (Gastroenterology)', 'doc_specialization':'Gastroenterologist','doc_experience':'0 years','doc_fee':'200 /-'}
+                ]
+}
+hosp_details.insert_one(hosp_data)
+print("inserted")
+client.close()
+=======================================================================================================================================================================================================================================
+import pymongo 
+from pymongo import MongoClient
+from mongoengine import *
+#from model import Post
+
+#using pymongo
+client = MongoClient()
+db = client['hospitals'] 
+hosp_details = db.hospital_details
+
+hosp_data = {
+    'hosp_id':'V06',
+    'hosp_name':'ABC Hospital',
+    'hosp_email':'abcpainclinic@gmail.com',
+    'hosp_address':'Plot No 5,Survey no 27, Health City, Arilova. Pin: 530040,Landmark: Beside Lorven Hotel',
+    'hosp_website':'http://www.abcpainclinic.com/',
+    'hosp_specs':['Orthopedics','Joint Replacement Surgery','Neurology','Physiotheraphy'],
+    'hosp_mobile':['8978485218','9912267895'],
+    'hosp_facility':['Non Surgical Regenerative Therapy for Knee/Hip/Shoulder Joint','Caudal Epidural Injections and Cervical Joint Injections','24/7 ambulance'],
+    'hosp_timings':'24 hours',
+    'doc_list':[{'hosp_id':'V06','doc_id':'VD29','doc_name':'Dr. P. V. Ramesh','doc_qualification':'M.S.(Ortho)','doc_specialization':'Orthopedician and Joint Replacement Surgery','doc_experience':'23 years','doc_fee':'250 /-'},
+                {'hosp_id':'V06','doc_id':'VD30','doc_name':'Dr. M.P.A Babu Nagendra','doc_qualification':'M.S., Mch(Neuro)', 'doc_specialization':' Neuro Surgeon','doc_experience':'23 years','doc_fee':'400 /-'},
+                {'hosp_id':'V06','doc_id':'VD31','doc_name':'Dr. G. V. S Murthy','doc_qualification':'D.N.B., DPM', 'doc_specialization': 'Consultant Psychiatrist','doc_experience':'22 years','doc_fee':'300 /-'},
+                {'hosp_id':'V06','doc_id':'VD32','doc_name':'Dr. B. Srikanth','doc_qualification':'M.D, F.I.P.M','doc_specialization': 'Neuro Physician','doc_experience':'20 years','doc_fee':'200 /-'},
+                {'hosp_id':'V06','doc_id':'VD33','doc_name':'Dr. M.V. Vijaya Shekar','doc_qualification':'M.S., M.Ch', 'doc_specialization':'consultant','doc_experience':'22 years','doc_fee':'230 /-'},
+                {'hosp_id':'V06','doc_id':'VD34','doc_name':'Dr. B Suneel Kumar','doc_qualification':'M.D., D.M (Neuro)', 'doc_specialization':'Neuro Physician','doc_experience':'10 years','doc_fee':'200 /-'}
+                ]
+}
+hosp_details.insert_one(hosp_data)
+print("inserted")
+client.close()
+========================================================================================================================================================================================================================================================================
+import pymongo 
+from pymongo import MongoClient
+from mongoengine import *
+#from model import Post
+
+#using pymongo
+client = MongoClient()
+db = client['hospitals'] 
+hosp_details = db.hospital_details
+
+hosp_data = {
+    'hosp_id':'V07',
+    'hosp_name':'M.B. Hospital',
+    'hosp_email':'MBHospital@gmail.com',
+    'hosp_address':'Plot:15B, APIIC Health City, Chinna Gadhili, Arilova, Visakhapatnam, Andhra Pradesh 530040',
+    'hosp_website':'https://mbhospitals.com/',
+    'hosp_specs':['Orthopedics','Joint Replacement Surgery','Neuro Surgery','Gynecology','Paediatrics','General Physician'],
+    'hosp_mobile':['080 7460 8203','+91 8975643886'],
+    'hosp_facility':['24hrs ambulance','Canteen with Diet and Dietician department','Caudal Epidural Injections and Cervical Joint Injections'],
+    'hosp_timings':'24 hours',
+    'doc_list':[{'hosp_id':'V07','doc_id':'VD35','doc_name':'DR.VISHNU PRASAD','doc_qualification':'M.S.','doc_specialization':'Neuro Surgeon','doc_experience':'21 years','doc_fee':'250 /-'},
+                {'hosp_id':'V07','doc_id':'VD36','doc_name':'DR.KRISHNA RAJIV','doc_qualification':'M.S., Mch(Neuro)', 'doc_specialization':'Neuro Surgeon','doc_experience':'24 years','doc_fee':'450 /-'},
+                {'hosp_id':'V07','doc_id':'VD37','doc_name':'DR.GNANESHWAR RAJ','doc_qualification':'D.N.B., DPM', 'doc_specialization': 'Orthopedician','doc_experience':'21 years','doc_fee':'350 /-'},
+                {'hosp_id':'V07','doc_id':'VD38','doc_name':'DR.PADMA LEELA','doc_qualification':'M.D','doc_specialization': 'Gynaecologist','doc_experience':'20 years','doc_fee':'200 /-'},
+                {'hosp_id':'V07','doc_id':'VD39','doc_name':'DR.RAMYA P','doc_qualification':'M.S.', 'doc_specialization':'Paediatrician','doc_experience':'22 years','doc_fee':'230 /-'},
+                {'hosp_id':'V07','doc_id':'VD40','doc_name':'DR.RAMA NAIDU','doc_qualification':'M.D.', 'doc_specialization':'General Physician','doc_experience':'25 years','doc_fee':'500 /-'}
+                ]
+}
+hosp_details.insert_one(hosp_data)
+print("inserted")
+client.close()
+===========================================================================================================================================================================================================================================================
+import pymongo 
+from pymongo import MongoClient
+from mongoengine import *
+#from model import Post
+
+#using pymongo
+client = MongoClient()
+db = client['hospitals'] 
+hosp_details = db.hospital_details
+
+hosp_data = {
+    'hosp_id':'V08',
+    'hosp_name':'Queens NRI Hospital',
+    'hosp_email':'QueensnriHospital@gmail.com',
+    'hosp_address':'D.No. 50-53-14, Gurudwara Lane,Seethammadara, Visakhapatnam, Andhra Pradesh-530013',
+    'hosp_website':'https://www.queensnrihospital.com/',
+    'hosp_specs':['Anesthesia','Cardiology','Dermatology','ENT','Dentals','Gastroenterology Surgery'],
+    'hosp_mobile':['1800 599 1818','0891-2827777','0891-2533078'],
+    'hosp_facility':['24hrs ambulance','Non-Airconditioned rooms','Air conditioned rooms'],
+    'hosp_timings':'24 hours',
+    'doc_list':[{'hosp_id':'V08','doc_id':'VD41','doc_name':'DR. T. A. R. SRINIVASA VARMA','doc_qualification':'M.B.B.S., M.D. ANAESTHESIOLOGY M.B.A., HOSPITAL ADMINISTRATION (A.U)','doc_specialization':'Anesthesia','doc_experience':'21 years','doc_fee':'250 /-'},
+                {'hosp_id':'V08','doc_id':'VD42','doc_name':'DR. A. Rekha','doc_qualification':'MBBS, PGDCC', 'doc_specialization':'Cardiologist','doc_experience':'24 years','doc_fee':'450 /-'},
+                {'hosp_id':'V08','doc_id':'VD43','doc_name':'Dr. Yasarapu Pydipathi Rao','doc_qualification':'MBBS., MD (DER)', 'doc_specialization': 'Dermatologist','doc_experience':'21 years','doc_fee':'350 /-'},
+                {'hosp_id':'V08','doc_id':'VD44','doc_name':'Dr. K. Rajeswari','doc_qualification':'BDS & IMPLANTOLOGIST','doc_specialization': 'Dentist','doc_experience':'20 years','doc_fee':'200 /-'},
+                {'hosp_id':'V08','doc_id':'VD45','doc_name':'DR. D.NAVEEN KUMAR','doc_qualification':'MBBS., MS (ENT)', 'doc_specialization':'ENT','doc_experience':'22 years','doc_fee':'230 /-'},
+                {'hosp_id':'V08','doc_id':'VD46','doc_name':'Dr. Ch. V. N. G. R. Ramanujam','doc_qualification':'M.S.(GENERAL SURGERY)F.M.A.S(FELLOW IN SURGICAL GASTROENTEROLOGY)', 'doc_specialization':'Gastroenterology Surgeon','doc_experience':'23 years','doc_fee':'250 /-'}
+                ]
+}
+hosp_details.insert_one(hosp_data)
+print("inserted")
+client.close()
+=============================================================================================================================================================================================================================================================================================================
+2)city======Kadapa================
+
+import pymongo 
+from pymongo import MongoClient
+from mongoengine import *
+#from model import Post
+
+#using pymongo
+client = MongoClient()
+db = client['hospitals'] 
+hosp_details = db.hospital_details
+
+hosp_data = {
+    'hosp_id':'V09',
+    'hosp_name':'Komma Super Speciality Hospital',
+    'hosp_email':'info@kommahospital.com',
+    'hosp_address':'Door No 1/100, 1/101, George Reddy Street,Yerramukkapalli, Kadapa, Andhra Pradesh 516003',
+    'hosp_website':'https://www.kommahospital.com',
+    'hosp_specs':['Orthopaedics',  'General Medicine', 'General Surgery','Anaesthesia', 'Physiotherapy','Cardiology', 'Gastroenterology'],
+    'hosp_mobile':['8886660108','9100013356'],
+    'hosp_facility':['24 / 7 Emergency','Joint Replacement Center','Laparoscopy','Advanced ICU, CCU, NICU & PICU','Maternity Care'],
+    'hosp_timings':'24 hours',
+    'doc_list':[{'hosp_id':'V09','doc_id':'VD47','doc_name':'DR. PRANEETH REDDY KOMMA','doc_qualification':'M.B.B.S., M.S., (ORTHO)','doc_specialization':'Orthopaedician','doc_experience':'25 years','doc_fee':'250 /-'},
+                {'hosp_id':'V09','doc_id':'VD48','doc_name':'DR. C. NEEHARIKA','doc_qualification':'MBBS, MS', 'doc_specialization':'gynaecologist','doc_experience':'24 years','doc_fee':'450 /-'},
+                {'hosp_id':'V09','doc_id':'VD49','doc_name':'DR. SAMUEL LENALD PALAJI','doc_qualification':'MBBS., D.N.B.', 'doc_specialization': 'Orthopaedician','doc_experience':'21 years','doc_fee':'350 /-'},
+                {'hosp_id':'V09','doc_id':'VD50','doc_name':'DR. KUSHAL DHEERAJ DANDAMUDI','doc_qualification':'M.D.','doc_specialization': ' GeneralMedicine','doc_experience':'20 years','doc_fee':'200 /-'},
+                {'hosp_id':'V09','doc_id':'VD51','doc_name':'DR. T. KARTHIK','doc_qualification':'MBBS., M.S [GENERAL SURGERY], F.MAS, D.MAS', 'doc_specialization':'General Surgeon','doc_experience':'22 years','doc_fee':'230 /-'},
+                {'hosp_id':'V09','doc_id':'VD52','doc_name':'Dr. Ch. Ramana','doc_qualification':'M.S.,F.M.A.S(FELLOW IN SURGICAL GASTROENTEROLOGY)', 'doc_specialization':'Gastroenterology Surgeon','doc_experience':'12 years','doc_fee':'250 /-'}
+                ]
+}
+hosp_details.insert_one(hosp_data)
+print("inserted")
+client.close()
+
+
+==============================================================================================================================================================================================================================================================================================================
+import pymongo 
+from pymongo import MongoClient
+from mongoengine import *
+#from model import Post
+
+#using pymongo
+client = MongoClient()
+db = client['hospitals'] 
+hosp_details = db.hospital_details
+
+hosp_data = {
+    'hosp_id':'V10',
+    'hosp_name':'Sri Sri Holistic Hospital',
+    'hosp_email':'enquiry@srisriholistichospitals.com',
+    'hosp_address':'KADAPA,Beside district police office main gate,Christian line, Maria Puram, Kadapa, Andhra Pradesh 516001',
+    'hosp_website':'https://www.srisriholistichospitals.com/',
+    'hosp_specs':['Cardiology','Ophthalmology','Obstetrics' ,'Gynecology','Orthopaedics','Pulmonology','Dermotology','Gastroenterology'],
+    'hosp_mobile':['8886610103','9100013356'],
+    'hosp_facility':['Electric-Physiology Lab for heart rhythm treatment','Multi Slice CT Scanner','24/7 Emergency','Trauma and Critical Care Services with 24 Hours Pharmacy and Ambulance services'],
+    'hosp_timings':'24 hours',
+    'doc_list':[{'hosp_id':'V10','doc_id':'VD53','doc_name':'DR. NIRANJAN REDDY REDDEPPAGARI','doc_qualification':'M.B.B.S., M.S.','doc_specialization':'Cardiologist','doc_experience':'25 years','doc_fee':'250 /-'},
+                {'hosp_id':'V10','doc_id':'VD54','doc_name':'DR. J. MAMATHESWARI JANGA','doc_qualification':'MBBS, MS', 'doc_specialization':'Obstetrics & gynaecologist','doc_experience':'24 years','doc_fee':'450 /-'},
+                {'hosp_id':'V10','doc_id':'VD55','doc_name':'DR. RAMANJNEYULU REDDY','doc_qualification':'MBBS., D.N.B.', 'doc_specialization': 'Pulmonologist','doc_experience':'21 years','doc_fee':'350 /-'},
+                {'hosp_id':'V10','doc_id':'VD56','doc_name':'DR. JAGADEESH BABU','doc_qualification':'M.D.','doc_specialization': 'Neurologist','doc_experience':'21 years','doc_fee':'200 /-'},
+                {'hosp_id':'V10','doc_id':'VD57','doc_name':'DR. SRI HARSHA','doc_qualification':'MBBS., M.S [GENERAL SURGERY], F.MAS, D.MAS', 'doc_specialization':'General Surgeon','doc_experience':'10 years','doc_fee':'270 /-'},
+                {'hosp_id':'V10','doc_id':'VD58','doc_name':'DR. N. RAMANA','doc_qualification':'M.S.', 'doc_specialization':'General Medicine','doc_experience':'12 years','doc_fee':'250 /-'},
+                {'hosp_id':'V10','doc_id':'VD59','doc_name':'DR. SIVA SHANKAR','doc_qualification':'M.S.', 'doc_specialization':'Physiotherapist','doc_experience':'15 years','doc_fee':'200 /-'}
+                ]
+}
+hosp_details.insert_one(hosp_data)
+print("inserted")
+client.close()
+==========================================================================================================================================================================================================================================================
+import pymongo 
+from pymongo import MongoClient
+from mongoengine import *
+#from model import Post
+
+#using pymongo
+client = MongoClient()
+db = client['hospitals'] 
+hosp_details = db.hospital_details
+
+hosp_data = {
+    'hosp_id':'V11',
+    'hosp_name':'Bhavya Nursing Home',
+    'hosp_email':'contact@bhavyanursinghome.com',
+    'hosp_address':'Near Gandhi Statue,Gandhi Road,Proddatur,Kadapa Dist 516 360',
+    'hosp_website':'http://www.bhavyanursinghome.com',
+    'hosp_specs':['Gynecology',
+                'General Medicine',
+                'General Surgery',
+                'Anaesthesia',
+                'Neonatology',
+                'Cardiology'],
+    'hosp_mobile':['08564-245533','9231456723'],
+    'hosp_facility':['Computerisation',
+                'House Keeping',
+                'Diagnostics Facilities',
+                'Ambulance Services',
+                'Radiology Services'],
+    'hosp_timings':'22 hours',
+    'doc_list':[{'hosp_id':'V11','doc_id' : 'VD60','doc_name' : 'Dr. SatyaPrasad','doc_qualification' : 'M.B.B.S.,Senior consultant and Managing Director','doc_specialization' : 'Anaesthesia','doc_experience' : '28 years','doc_fee' : '250 /-'},
+                {'hosp_id':'V11','doc_id':'VD61','doc_name':'Dr. V. Sandhya Kumari','doc_qualification':'MD', 'doc_specialization':'gynaecologist','doc_experience':'24 years','doc_fee':'450 /-'},
+                {'hosp_id':'V11','doc_id':'VD62','doc_name':'Dr.G.V.G.Mahesh','doc_qualification':'M.B.B.S. M.S(Gen)', 'doc_specialization': 'General Medicine','doc_experience':'25 years','doc_fee':'350 /-'},
+                {'hosp_id':'V11','doc_id':'VD63','doc_name':'Dr. P.V. Chandra Sekhar','doc_qualification':'M.B.B.S., D.C.H','doc_specialization': 'Cardiology','doc_experience':'20 years','doc_fee':'200 /-'},
+                {'hosp_id':'V11','doc_id':'VD64','doc_name':'DR. T. Vishwarupam','doc_qualification':'MBBS., M.D', 'doc_specialization':'Cardiology & Psycology','doc_experience':'21 years','doc_fee':'400 /-'},
+                {'hosp_id':'V11','doc_id':'VD65','doc_name':'Dr.K.Ramu ','doc_qualification':'M.S.,F.M.A.S(FELLOW IN SURGICAL GASTROENTEROLOGY)', 'doc_specialization':'Cardiology','doc_experience':'2 years','doc_fee':'100 /-'}
+                ]
+}
+hosp_details.insert_one(hosp_data)
+print("inserted")
+client.close()
+
+
+========================================================================================================================================================================================================================================================
+import pymongo 
+from pymongo import MongoClient
+from mongoengine import *
+#from model import Post
+
+#using pymongo
+client = MongoClient()
+db = client['hospitals'] 
+hosp_details = db.hospital_details
+
+hosp_data = {
+    'hosp_id':'V12',
+    'hosp_name':'Swarup Eye Hospital And Laser Center',
+    'hosp_email':'swarupeyehospital@gmail.com',
+    'hosp_address':'TB Road, Andhra Pradesh No. 3-1157 , TB Road, Proddatur, Andhra Pradesh',
+    'hosp_website':'www.swarupeyehospital.com',
+    'hosp_specs':['General Medicine', 'Anaesthesia','Cardiology','ophthalmology'],
+    'hosp_mobile':['08564-245533','9231456723'],
+    'hosp_facility':['abdominal pain','normal delivery','neurological disorders','general surgery','immunization','vaccination','viral fever'],
+    'hosp_timings':'22 hours',
+    'doc_list':[{'hosp_id':'V12','doc_id':'VD66','doc_name':'Dr. Y V Swarup K Reddy','doc_qualification':'M.B.B.S., MD','doc_specialization':'Ophthalmologist','doc_experience':'28 years','doc_fee':'250 /-'},
+                {'hosp_id':'V12','doc_id':'VD67','doc_name':'Dr. Y V Dhana Lakshmi','doc_qualification':'MD', 'doc_specialization':'Ophthalmologist','doc_experience':'24 years','doc_fee':'450 /-'},
+                {'hosp_id':'V12','doc_id':'VD68','doc_name':'Dr.G.Maheshwari','doc_qualification':'M.B.B.S. M.S(Gen)', 'doc_specialization': 'General Medicine','doc_experience':'25 years','doc_fee':'350 /-'},
+                {'hosp_id':'V12','doc_id':'VD69','doc_name':'Dr. P.V. Chandhana','doc_qualification':'M.B.B.S., D.C.H','doc_specialization': 'Cardiology','doc_experience':'20 years','doc_fee':'200 /-'},
+                {'hosp_id':'V12','doc_id':'VD70','doc_name':'DR. T. Vyshnavi','doc_qualification':'MBBS., M.D', 'doc_specialization':'Cardiology','doc_experience':'21 years','doc_fee':'400 /-'},
+                {'hosp_id':'V12','doc_id':'VD71','doc_name':'Dr.K.Rama Krishna ','doc_qualification':'M.S.,F.M.A.S(FELLOW IN SURGICAL GASTROENTEROLOGY)', 'doc_specialization':'Gastroenterology Surgeon','doc_experience':'20 years','doc_fee':'100 /-'}
+                ]
+}
+hosp_details.insert_one(hosp_data)
+print("inserted")
+client.close()
+=================================================================================================================================================================================================================================================================================

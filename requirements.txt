@@ -1,0 +1,15 @@
+# pip install -r requirements.txt 
+flask
+requests
+beautifulsoup4
+pymongo
+mongoengine
+flask-restful
+flask-mongoengine
+flask-pymongo
+flask-cors
+
+
+# Carousel link
+#https://bootsnipp.com/snippets/WMlMa 
+# npm i --save react-simple-chatbot styled-components

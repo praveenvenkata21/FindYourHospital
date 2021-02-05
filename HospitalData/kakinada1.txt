@@ -1,0 +1,201 @@
+--------------
+doc.py
+-----------------------------
+inserted
+2.kakinada hospital data
+
+
+client = MongoClient()
+db = client['hospitals'] 
+hosp_details = db.hospital_details
+hosp_data = {
+    'hosp_id':'HD01',
+    'hosp_name':'Kusuma Hospital',
+    'hosp_email':'kusumahospital@gmail.com',
+    'hosp_address':' Town Railway Station Road,Ramaraopeta, Kakinada - 04',
+    'hosp_website':'http://www.inkakinada.com/category/services',
+    'hosp_specs':['Cardiology','General Surgery','Endocrinology','Gynecology','Dentist','Pediatrics','Ayurvedic'],
+    'hosp_mobile':['+91 9237788358','91)-884-2364772'],
+    'hosp_facility':['ENMG','24 Hour Pharmacy',' CT Scan','Pharmacy','MRI Scan'],
+    'hosp_timings':'24 Hours',
+    'doc_list':[{'hosp_id':'HD01','doc_id':'D001','doc_name':'Dr. Nitesh Prasad','doc_qualification':'MBBS, MD, DM','doc_specialization': 'Cardiologist','doc_experience':'10 years','doc_fee':'500 /-'},
+                {'hosp_id':'HD01','doc_id':'D002','doc_name':'Dr. Anoop Kumar Modi','doc_qualification':'MBBS DV,MD','doc_specialization': 'General Surgeon','doc_experience':'18 years','doc_fee':'800 /-'},
+                {'hosp_id':'HD01','doc_id':'D003','doc_name':'Dr. Manish Verma','doc_qualification':'MS(Clinical Endocrinology)','doc_specialization': 'Endocrinologist','doc_experience':'16 years','doc_fee':'750 /-'},
+                {'hosp_id':'HD01','doc_id':'D004','doc_name':'Dr. Venkat Reddy ','doc_qualification':'MBBS, DNB OBG','doc_specialization': 'Gynecologist','doc_experience':'8 years','doc_fee':'300 /-'},
+                {'hosp_id':'HD01','doc_id':'D005','doc_name':'Dr. Arun','doc_qualification':'M.d(dentist), M.B.B.S', 'doc_specialization':'Dentist','doc_experience':'10 years','doc_fee':'400 /-'},
+                {'hosp_id':'HD01','doc_id':'D006','doc_name':'Dr. Savitha Nagendra','doc_qualification':'MBBS,DCH,MD','doc_specialization': 'Pediatricians','doc_experience':'16 years','doc_fee':'750 /-'},
+                {'hosp_id':'HD01','doc_id':'D007','doc_name':'Dr. Diwya Tyagi','doc_qualification':'B.A.MS', 'doc_specialization':'Ayurvedic','doc_experience':'29 years','doc_fee':'700 /-'}
+                ]
+}
+hosp_details.insert_one(hosp_data)
+print("inserted")
+client.close()
+----------------------------------------------
+import pymongo 
+from pymongo import MongoClient
+from mongoengine import *
+#from model import Post
+
+#using pymongo
+client = MongoClient()
+db = client['hospitals'] 
+hosp_details = db.hospital_details
+hosp_data = {
+    'hosp_id':'HD02',
+    'hosp_name':'Apollo Hospital',
+    'hosp_email':'apollohospitalkakinada@gmail.com',
+    'hosp_address':' Door No 13-1-3, Suryarao Pet, Suryaraopet,Kakinada - 533001',
+    'hosp_website':'https://www.apollokakinada.com/',
+    'hosp_specs':['General Medicine','Orthopaedics','Neurology','Urology','Gynecology','Dentist','General Surgery'],
+    'hosp_mobile':['0877-1340678','07947354387'],
+    'hosp_facility':[ '24 Hour Pharmacy', 'CT Scan','Pharmacy','MRI Scan'],
+    'hosp_timings':'24 Hours',
+    'doc_list':[{ 'hosp_id':'HD02','doc_id':'D008','doc_name':'Dr Partha Pratim Chatterjee','doc_qualification':'MBBS, D.Ortho','doc_specialization': 'Orthopaedics','doc_experience':'15 years','doc_fee':'600 /-'},
+                { 'hosp_id':'HD02','doc_id':'D009','doc_name':'Dr Manohar Prasad Bomidi','doc_qualification':'MS, Mch','doc_specialization': 'Neurology','doc_experience':'11 years','doc_fee':'400 /-'},
+                { 'hosp_id':'HD02','doc_id':'D010','doc_name':'Dr Vineet Sakhireddy','doc_qualification':' MBBS, MS, MCh. Urology','doc_specialization': 'Urology','doc_experience':'8 years','doc_fee':'350 /-'},
+                { 'hosp_id':'HD02','doc_id':'D011','doc_name':'Dr Sandhya Peethani','doc_qualification':'MBBS, DNB OBG','doc_specialization': 'Gynecologist','doc_experience':'25 years','doc_fee':'800 /-'},
+                { 'hosp_id':'HD02','doc_id':'D012','doc_name':'Dr. D.V.S.Kiran Raju','doc_qualification':'M.d(dentist), M.B.B.S', 'doc_specialization':'Dentist','doc_experience':'9 years','doc_fee':'400 /-'},
+                { 'hosp_id':'HD02','doc_id':'D013','doc_name':'Dr.J.shiva Prasad','doc_qualification':'M.D','doc_specialization': 'General Medicine','doc_experience':'21 years','doc_fee':'700 /-'},
+                { 'hosp_id':'HD02','doc_id':'D014','doc_name':'Dr.Sudheer Reddy','doc_qualification':'M.D,M.B.B.S', 'doc_specialization':'General Surgeon','doc_experience':'11 years','doc_fee':'500 /-'}
+                ]
+}
+hosp_details.insert_one(hosp_data)
+print("inserted")
+client.close()
+-----------------------------------------------------
+
+import pymongo 
+from pymongo import MongoClient
+from mongoengine import *
+#from model import Post
+
+#using pymongo
+client = MongoClient()
+db = client['hospitals'] 
+hosp_details = db.hospital_details
+hosp_data = {
+    'hosp_id':'HD03',
+    'hosp_name':'SAI SUDHA HOSPITAL',
+    'hosp_email':'saisudhahospital@gmail.com',
+    'hosp_address':' Door No 21-1-24, Hospital Building,Jawahar Street, Salipeta,Kakinada - 533001',
+    'hosp_website':'https://www.justdial.com/Kakinada/Sai-Sudha-Hospital-Near-Balacheru-Salipeta/9999PX884-X884-100128143811-Q9A6_BZDET',
+    'hosp_website' : "https://www.justdial.com/Kakinada/Sai-Sudha-Hospital-Near-Balacheru-Salipeta/9999PX884-X884-100128143811-Q9A6_BZDET",
+    'hosp_specs' : ['General Physician','Orthopaedics','Homeopathy','Urology','Gynecology','Dentist','General Surgery'],
+    'hosp_mobile':['884-2376634','8842376635'],
+    "hosp_facility" : ["ENMG", "24 Hour Pharmacy","CT Scan", "Pharmacy","MRI Scan"],
+    'hosp_timings':'24 Hours',
+    'doc_list':[{'hosp_id':'HD03','doc_id':'D015','doc_name':'Dr. Hari Krishna Saladi','doc_qualification':'MBBS, D.Ortho','doc_specialization': 'Orthopaedics','doc_experience':'17 years','doc_fee':'500 /-'},
+                {'hosp_id':'HD03','doc_id':'D016','doc_name':'Dr. Manoj Koppireddy','doc_qualification':'MS, Mch','doc_specialization': 'Homeopathy','doc_experience':'15 years','doc_fee':'400 /-'},
+                {'hosp_id':'HD03','doc_id':'D017','doc_name':'Dr. Amrutha Rao Thota','doc_qualification':' MBBS,MCh. Urology','doc_specialization': 'Urologist','doc_experience':'8 years','doc_fee':'350 /-'},
+                {'hosp_id':'HD03','doc_id':'D018','doc_name':'Dr. Madhavi Adabala','doc_qualification':'MBBS, DNB OBG','doc_specialization': 'Gynecologist','doc_experience':'25 years','doc_fee':'800 /-'},
+                {'hosp_id':'HD03','doc_id':'D019','doc_name':'Dr. D.V.S.Kiran Raju','doc_qualification':'M.d(dentist), M.B.B.S', 'doc_specialization':'Dentist','doc_experience':'10 years','doc_fee':'400 /-'},
+                {'hosp_id':'HD03','doc_id':'D020','doc_name':'Dr. Harshita Shareef','doc_qualification':'M.D','doc_specialization': 'General Physician','doc_experience':'12 years','doc_fee':'400 /-'},
+                {'hosp_id':'HD03','doc_id':'D021','doc_name':'Dr. Sushma Reddy','doc_qualification':'M.D,M.B.B.S', 'doc_specialization':'General Surgeon','doc_experience':'21 years','doc_fee':'700 /-'}
+                ]
+}
+hosp_details.insert_one(hosp_data)
+print("inserted")
+client.close()
+--------------------------------------------------
+import pymongo 
+from pymongo import MongoClient
+from mongoengine import *
+#from model import Post
+
+#using pymongo
+client = MongoClient()
+db = client['hospitals'] 
+hosp_details = db.hospital_details
+hosp_data = {
+    'hosp_id':'HD04',
+    'hosp_name':'Sri Gowthami Multi Speciality Hospital',
+    'hosp_email':'srigowthamimultispecialityhospital@gmail.com',
+    'hosp_address':' D.No: 10-5-53, Nageswararao Street, Ramaraopeta, Kakinada - 04',
+    'hosp_website':'inkakinada.com/list/sri-gowthami-multi-speciality-hospital',
+    'hosp_specs':['Cardiology','General Surgery','Gynecology','Dentist','General Medicine','Orthopaedics '],
+    'hosp_mobile':['+(91)-0884-2376250','8842342398'],
+    'hosp_facility':['ENMG','Stroke Care ICU',
+                        '24 Hour Pharmacy','Ultra Sound Scanning'],
+    'hosp_timings':'24 Hours',
+    'doc_list':[{'hosp_id':'HD04','doc_id':'D022','doc_name':'Dr. Basker Jayaraman','doc_qualification':'MBBS, MD, DM','doc_specialization': 'Cardiology','doc_experience':'11 years','doc_fee':'500 /-'},
+                {'hosp_id':'HD04','doc_id':'D023','doc_name':'Dr. P.V.V Satyanarayana','doc_qualification':'MBBS DV,MD','doc_specialization': 'General Surgeon','doc_experience':'22 years','doc_fee':'800 /-'},
+                {'hosp_id':'HD04','doc_id':'D025','doc_name':'Dr.K Chandrakala','doc_qualification':'MBBS, DNB OBG','doc_specialization': 'Gynecologist','doc_experience':'15 years','doc_fee':'800 /-'},
+                {'hosp_id':'HD04','doc_id':'D026','doc_name':'Dr.T Mohanrao','doc_qualification':'M.d(dentist), M.B.B.S', 'doc_specialization':'Dentist','doc_experience':'16 years','doc_fee':'400 /-'},
+                {'hosp_id':'HD04','doc_id':'D027','doc_name':'Dr.Vadrevu Ravi','doc_qualification':'M.D','doc_specialization': 'General Medicine','doc_experience':'10 years','doc_fee':'400 /-'},
+                {'hosp_id':'HD04','doc_id':'D028','doc_name':'Dr. Sushanth Reddy','doc_qualification':'MBBS, D.Ortho, DNB Ortho', 'doc_specialization':'Orthopaedician','doc_experience':'21 years','doc_fee':'700 /-'}
+                ]
+}
+hosp_details.insert_one(hosp_data)
+print("inserted")
+client.close()
+------------------------------------------------------------------------
+import pymongo 
+from pymongo import MongoClient
+from mongoengine import *
+#from model import Post
+
+#using pymongo
+client = MongoClient()
+db = client['hospitals'] 
+hosp_details = db.hospital_details
+hosp_data = {
+    'hosp_id':'HD05',
+    'hosp_name':'Srujana Multi Speciality Hospital',
+    'hosp_email':'srujanamultispecialityhospital@gmail.com',
+    'hosp_address':' D.No:2-27-24/1, Gokul Street, Sri Nagar, Kakinada - 03',
+    'hosp_website':'http://www.inkakinada.com/list/srujana-multi-specialty-hospital',
+    'hosp_specs':['Cardiology','General Surgery','Pulmonology','Gynecology','Dentist','Anaesthesia','Orthopedics '],
+    'hosp_mobile':['+91 9440358358','+(91)-0884-2361669'],
+    'hosp_facility':['ENMG','Stroke Care ICU',
+                        '24 Hour Pharmacy','CT Scan',
+                        'Pharmacy','MRI Scan'],
+    'hosp_timings':'24 Hours',
+    'doc_list':[{'hosp_id':'HD05','doc_id':'D029','doc_name':'Dr. P. Raju','doc_qualification':'MBBS, MD, DM','doc_specialization': 'Cardiology','doc_experience':'15 years','doc_fee':'500 /-'},
+                {'hosp_id':'HD05','doc_id':'D030','doc_name':'Dr. Praveennath Ghanta','doc_qualification':'MBBS DV,MD','doc_specialization': 'General Surgeon','doc_experience':'12 years','doc_fee':'400 /-'},
+                {'hosp_id':'HD05','doc_id':'D031','doc_name':'Dr Raju Pampana','doc_qualification':'MBBS, MD - Pulmonary Medicine','doc_specialization': 'Pulmonology','doc_experience':'11 years','doc_fee':'550 /-'},
+                {'hosp_id':'HD05','doc_id':'D032','doc_name':'Dr. T. Ananatha Lakshmi','doc_qualification':'MBBS, DNB OBG','doc_specialization': 'Gynecology','doc_experience':'17 years','doc_fee':'800 /-'},
+                {'hosp_id':'HD05','doc_id':'D033','doc_name':'Dr. P.Sai krishna','doc_qualification':'M.d(dentist), M.B.B.S', 'doc_specialization':'Dentist','doc_experience':'12 years','doc_fee':'400 /-'},
+                {'hosp_id':'HD05','doc_id':'D034','doc_name':'Dr. K.Krishna Vara Prasad','doc_qualification':'MBBS, Diploma in Anesthesiology','doc_specialization': 'Anaesthesiology','doc_experience':'8 years','doc_fee':'400 /-'},
+                {'hosp_id':'HD05','doc_id':'D035','doc_name':'Dr. Satish','doc_qualification':'MBBS, D.Ortho, DNB Ortho', 'doc_specialization':'Orthopedician','doc_experience':'27 years','doc_fee':'700 /-'}
+                ]
+}
+hosp_details.insert_one(hosp_data)
+print("inserted")
+client.close()
+------------------------------------------------------------------------------------
+import pymongo 
+from pymongo import MongoClient
+from mongoengine import *
+#from model import Post
+
+#using pymongo
+client = MongoClient()
+db = client['hospitals'] 
+hosp_details = db.hospital_details
+hosp_data = {
+    'hosp_id':'HD06',
+    'hosp_name':'Sri Sai Raghavendra Super Specialities Hospital',
+    'hosp_email':'srisairaghavendrasuperspecialities@gmail.com',
+    'hosp_address':' 8-5-19/1, Ontimamidi junction,Gandhi Nagar, Kakinada - 04',
+    'hosp_website':'http://www.inkakinada.com/list/sri-sai-raghavendra-super-specialities-hospital',
+    'hosp_specs':['Cardiology','General Surgery','Pulmonology','Gynecology','Dentist','Anaesthesia','Orthopedics'],
+    'hosp_mobile':['+91 9237788358','(+91)-884-2364772'],
+    'hosp_facility':['ENMG','Stroke Care ICU',
+                        '24 Hour Pharmacy', 'CT Scan',
+                        'Pharmacy','MRI Scan'],
+    'hosp_timings':'24 Hours',
+    'doc_list':[{'hosp_id':'HD06','doc_id':'D036','doc_name':'Dr. Satyanarayana Kondamuri','doc_qualification':'MBBS, MD, DM','doc_specialization': 'Cardiologist','doc_experience':'9 years','doc_fee':'500 /-'},
+                {'hosp_id':'HD06','doc_id':'D037','doc_name':'Dr. Sravanthi Mandipudi','doc_qualification':'MBBS DV,MD','doc_specialization': 'General Surgeon','doc_experience':'22 years','doc_fee':'800 /-'},
+                {'hosp_id':'HD06','doc_id':'D038','doc_name':'Dr. Kondamuri Satyanaraya','doc_qualification':'MBBS, MD - Pulmonary Medicine','doc_specialization': 'Pulmonologist','doc_experience':'14 years','doc_fee':'750 /-'},
+                {'hosp_id':'HD06','doc_id':'D039','doc_name':'Dr. Aruna Kumari ','doc_qualification':'MBBS, DNB OBG','doc_specialization': 'Gynecologist','doc_experience':'6 years','doc_fee':'300 /-'},
+                {'hosp_id':'HD06','doc_id':'D040','doc_name':'Dr. Ravi Chandra','doc_qualification':'M.d(dentist), M.B.B.S', 'doc_specialization':'Dentist','doc_experience':'12 years','doc_fee':'400 /-'},
+                {'hosp_id':'HD06','doc_id':'D041','doc_name':'Dr. Animesh Majhi','doc_qualification':'MBBS, Diploma in Anesthesiology','doc_specialization': 'Anaesthesiology','doc_experience':'16 years','doc_fee':'700 /-'},
+                {'hosp_id':'HD06','doc_id':'D042','doc_name':'Dr. Abhishek Chatterjee','doc_qualification':'MBBS, D.Ortho, DNB Ortho', 'doc_specialization':'Orthopedics Surgeon','doc_experience':'12 years','doc_fee':'700 /-'}
+                ]
+}
+hosp_details.insert_one(hosp_data)
+print("inserted")
+client.close()
+---------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------
