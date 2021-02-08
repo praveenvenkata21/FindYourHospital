@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import DoctorCards from './DoctorCards';
 import './HospitalDisplay.css';
 import axios from 'axios';
-import location from './location';
 import HospitalCards from './HospitalCards';
 
 
@@ -18,7 +17,7 @@ export default class HospitalDisplay extends React.Component {
         .then(res => {
 
             this.setState({ hospitalData: res.data['hospitallist'] });
-           console.log(this.state.hospitalData)           
+                   
       })
 
     }

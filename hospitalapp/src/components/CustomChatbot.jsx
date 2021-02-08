@@ -74,10 +74,15 @@ function CustomChatbot(props) {
                     label: "Guntur",
                     trigger: "Guntur Hospitals"
                   },{ 
-                    value: "No query",
-                    label: "No query",
-                    trigger: "Done"
-                  }
+                    value: "Another query",
+                    label: "Another query",
+                    trigger: "Repeat"
+                  },
+                  { 
+                     value: "No query",
+                     label: "No query",
+                     trigger: "Done"
+                   }
                   
 
                  ]
@@ -123,10 +128,18 @@ function CustomChatbot(props) {
         trigger: "cities options"
      },
      {
-         id: "Done",
-         message: "Have a great day !!",
-         end: true
-     }
+         id: "Repeat",
+         message: "-------------",
+         trigger: "Greet"
+         
+     },
+     {
+      id: "Done",
+      message: "Have a great day !!",
+      end: true
+      
+      
+  }
     ];
   return <ChatBot steps={steps} {...config} />
 }

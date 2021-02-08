@@ -7,7 +7,6 @@ export default function PieChart() {
 
   am4core.ready(function () {
 
-
     am4core.useTheme(am4themes_animated);
     var chart = am4core.create("chartdiv", am4charts.PieChart3D);
     chart.hiddenState.properties.opacity = 0;
@@ -37,8 +36,6 @@ export default function PieChart() {
         "Speciality": "Orthopaedics",
         "count": "20"
       },
-      
-      
     ];
 
     var series = chart.series.push(new am4charts.PieSeries3D());
@@ -47,12 +44,13 @@ export default function PieChart() {
 
   });
 
-
   return (
 
     <div className="piechart container-fluid">
 
-      <div id="chartdiv"></div>
+      <div id="chartdiv">
+        
+      </div>
     </div>
   )
 }

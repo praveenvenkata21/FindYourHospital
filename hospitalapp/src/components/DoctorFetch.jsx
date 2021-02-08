@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import DoctorCards from './DoctorCards';
 import './HospitalDisplay.css';
 import axios from 'axios';
-import location from './location';
 import HospitalCards from './HospitalCards';
 import './DoctorFetch.css';
 
